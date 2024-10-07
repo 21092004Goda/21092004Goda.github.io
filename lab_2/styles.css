@@ -1,35 +1,44 @@
+/* Общие стили */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: #f7f7f7;
+    line-height: 1.6;
 }
 
-.header-container {
+/* Заголовок */
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
+    padding: 15px 20px;
 }
 
-.header-left, .header-right {
+/* Стили для элементов заголовка */
+.header__left, .header__right {
     display: flex;
     align-items: center;
 }
 
-.header-center {
+.header__center {
     text-align: center;
     flex: 1;
 }
 
-.menu-icon {
+.header__menu-icon {
     font-size: 24px;
     margin-right: 10px;
     cursor: pointer;
 }
 
-.brand-name h1 {
+.brand-name__title {
     font-family: 'Playfair Display', serif;
     font-size: 36px;
     margin: 0;
@@ -37,169 +46,160 @@ body {
     letter-spacing: 2px;
 }
 
-.brand-location p {
+.brand-location__text {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     font-size: 14px;
     letter-spacing: 2px;
 }
 
-.header-left a, .header-left button, .header-right span {
+.header__phone, .header__language-button, .header__icon {
     margin-right: 15px;
     color: black;
     text-decoration: none;
 }
 
-.header-right span {
+.header__icon {
     font-size: 18px;
     cursor: pointer;
 }
 
+/* Основная навигация */
 .main-nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень */
 }
 
-.main-nav a {
-    color: black;
+.main-nav__link {
+    color: #333;
     text-decoration: none;
-    margin: 0 10px;
-    text-transform: uppercase;
-    font-size: 14px;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: 500; /* Насыщенность шрифта */
+    text-transform: uppercase; /* Регистр символов */
 }
 
-.main-nav a:hover {
+.main-nav__link:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .main-nav {
-        flex-direction: column;
-        align-items: center;
-    }
+/* Основной контент */
+.main {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Тень */
 }
 
-/* Стили для навигации и подзаголовков */
-nav h1, header h2 {
-    margin: 0;
-    font-size: 24px;
+/* Стили для заголовков */
+.main__title {
+    font-size: 28px;
     text-align: center;
-    color: #1a1a1a;
+    margin: 20px 0;
 }
 
-/* Стили для фильтров */
-section div {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
+/* Стили для сетки товаров */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Стили для товаров */
+.product {
     background-color: #fff;
-    border-bottom: 1px solid #ddd;
-}
-
-section div button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-section div select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Стили для основного контента */
-main {
-    background-color: #fff;
-    padding: 20px;
-}
-
-/* Стили для статей с товарами */
-article {
     border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-article p {
-    margin: 5px 0;
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Стили для кнопок добавления товара */
-article p:last-child {
-    color: #007BFF;
-    cursor: pointer;
-}
-
-/* Стили для footer */
-footer {
-    background-color: #fff;
-    padding: 20px;
-    border-top: 1px solid #ddd;
-    text-align: center;
-}
-
-footer h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-footer p, footer a {
-    color: #555;
-    font-size: 14px;
-    text-decoration: none;
-}
-
-footer nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-footer nav ul li {
-    display: inline-block;
-    margin-right: 15px;
-}
-
-/* Стили для текста */
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-}
-
-p {
-    line-height: 1.6;
-}
-
-/* Подчеркивание, стилизация текста */
-a:hover {
-    text-decoration: underline;
-}
-
-strong {
-    font-weight: bold;
-}
-
-em {
-    font-style: italic;
-}
-
-/* Тени для изображений */
-img {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+/* Стили для изображений */
+.product__image {
+    border-radius: 8px;
     max-width: 100%;
     height: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+/* Стили для названия и цены товара */
+.product__name,
+.product__price {
+    text-align: center;
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+    display: block;
+}
+
+.product__name:hover {
+    color: gray;
+}
+
+/* Футер */
+.footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+.footer__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer__brand {
+    flex: 1;
+}
+
+.brand-name__title,
+.brand-location__text {
+    margin: 0;
+}
+
+.footer__info {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__nav-column {
+    flex: 1;
+}
+
+.footer__nav-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.footer__nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__nav-link {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer__nav-link:hover {
+    text-decoration: underline;
 }
