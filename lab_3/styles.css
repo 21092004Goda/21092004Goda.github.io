@@ -801,3 +801,70 @@
         font-size: 3vw; /* Пропорциональный размер шрифта для навигации */
     }
 }
+
+/* Контейнер для всей таблицы */
+.table-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Три колонки, каждая с одинаковой шириной */
+    gap: 10px; /* Расстояние между ячейками */
+    margin: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+/* Заголовки таблицы */
+.table-header {
+    display: contents; /* Заголовки будут занимать места внутри контейнера grid */
+    font-weight: bold;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+/* Ячейки таблицы */
+.table-cell {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: #fff;
+    box-sizing: border-box;
+    white-space: nowrap; /* Запрещаем перенос текста */
+}
+
+/* Стиль для чётных и нечётных строк */
+.table-row:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+.table-row:nth-child(odd) {
+    background-color: #fff;
+}
+
+/* Адаптивность: при ширине экрана более 600px таблица масштабируется */
+@media screen and (min-width: 600px) {
+    .table-container {
+        grid-template-columns: repeat(3, 1fr); /* Три колонки с одинаковой шириной */
+        grid-auto-rows: minmax(50px, auto); /* Строки таблицы будут адаптивными */
+    }
+
+    .table-cell {
+        font-size: 1rem; /* Размер текста будет адаптивным */
+        padding: 15px;
+    }
+}
+
+/* Адаптивность для экранов с шириной меньше 600px */
+@media screen and (max-width: 600px) {
+    /* Скрываем таблицу на маленьких экранах */
+    .table-container {
+        display: none;
+    }
+
+    /* Создаем альтернативное отображение или скрываем элементы, если нужно */
+    .table-container-mobile {
+        display: block;
+        overflow-x: auto; /* Добавляем горизонтальную прокрутку */
+        white-space: nowrap; /* Оставляем строки в одну линию */
+    }
+}
