@@ -85,4 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Обработчик на кнопку "Load"
     loadButton.addEventListener('click', loadTasks);
+
+    // Загрузка задач при первой загрузке страницы (при перезагрузке)
+    loadTasks();
 });

@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+.content {
+    margin-top: 140px;
+}
+
 /* Ряд для колонок */
 .row {
     display: flex;
@@ -130,15 +134,14 @@
     cursor: pointer;
 }
 
-/* Убираем подчеркивание у ссылки */
+
 a {
     text-decoration: none;
 }
 
-/* Делаем иконку черной */
 .header__menu-icon {
-    color: black; /* Цвет иконки */
-    font-size: 30px; /* Размер иконки */
+    color: black;
+    font-size: 30px;
 }
 
 /* Дополнительно можно добавить стиль для изменения цвета при наведении */
