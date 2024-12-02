@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Магазин одежды</title>
+  <link rel="stylesheet" href="../../styles/styles.css">
+  <script src="/lab_4/scripts/main_statist.js" defer></script>
+  <script src="/lab_4/scripts/scrollToTop.js" defer></script>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-4 header__left">
+        <span class="header__menu-icon hidden-at-750px">&#9776;</span>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_one/page_telephone/page.html" class="header__phone hidden-at-800px">+7 495 139 55 71</a>
+        <button class="header__language-button hidden-at-800px">RU &#x25BE;</button>
+      </div>
+      <div class="col-4 header__center">
+        <h1 class="brand-name__title">SAMBABVI</h1>
+        <p class="brand-location__text">RUSSIA</p>
+      </div>
+      <div class="col-4 header__right hidden-at-800px">
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_one/page_1/page.html" class="header__icon">&#x1F4CD;</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_one/page_2/page.html" class="header__icon">&#x1F50D;</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_one/page_3/page.html" class="header__icon">&#x1F464;</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_one/page_4/page.html" class="header__icon">&#x2764;</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_one/page_5/page.html" class="header__icon">&#x1F6D2;</a>
+      </div>
+    </div>
+    <div class="row">
+      <nav class="main-nav col-12">
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_all_products/page.html" class="main-nav__link">ВСЕ</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_new_products/page.html" class="main-nav__link">НОВИНКИ</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_bestsellers/page.html" class="main-nav__link">БЕСТСЕЛЛЕРЫ</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_swimwear/page.html" class="main-nav__link">КУПАЛЬНИКИ</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_sexy/page.html" class="main-nav__link">SEXY</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_bras/page.html" class="main-nav__link">БЮСТГАЛЬТЕРЫ</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_pants/page.html" class="main-nav__link">ТРУСЫ</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_collections/page.html" class="main-nav__link">КОЛЛЕКЦИЯ</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_body/page.html" class="main-nav__link">БОДИ</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_cotton/page.html" class="main-nav__link">ХЛОПОК</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_silk/page.html" class="main-nav__link">ШЕЛК</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_underwear/page.html" class="main-nav__link">БЕЛЬЕ</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_seamless/page.html" class="main-nav__link">БЕСШОВНОЕ</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_lingerie/page.html" class="main-nav__link">НИЖНЕЕ БЕЛЬЕ</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_clothes/page.html" class="main-nav__link">ОДЕЖДА</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_socks/page.html" class="main-nav__link">НОСКИ</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_tights/page.html" class="main-nav__link">КОЛГОТКИ</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_shoes/page.html" class="main-nav__link">ОБУВЬ</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_for_children/page.html" class="main-nav__link">ДЕТЯМ</a>
+        <a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_for_men/page.html" class="main-nav__link">МУЖЧИНАМ</a>
+      </nav>
+      <script src="/lab_4/scripts/menu_look_pad.js"></script>
+    </div>
+  </div>
+</header>
+
+<main class="container content" style="margin-top: 140px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="find-clothes">
+          <h2 class="find-clothes__title">Find Clothes</h2>
+          <form id="find-clothes-form" class="find-clothes__form">
+            <input type="text" id="task" class="find-clothes__input" placeholder="Enter a task">
+            <button type="submit" class="find-clothes__button">Add Task</button>
+          </form>
+          <ul id="find-clothes-list" class="find-clothes__list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/lab_5/scripts/find_work_clothes.js"></script>
+</main>
+
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__brand col-3">
+      <div class="brand-name">
+        <h1 class="brand-name__title">SAMBABVI</h1>
+        <p class="brand-location__text">RUSSIA</p>
+      </div>
+    </div>
+
+    <nav class="footer__info col-9">
+      <div class="footer__nav-column">
+        <h3 class="footer__nav-title">Каталог</h3>
+        <ul class="footer__nav-list">
+          <li><a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_swimwear/page.html" class="footer__nav-link">Купальники</a></li>
+          <li><a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_pants/page.html" class="footer__nav-link">Трусы</a></li>
+          <li><a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_underwear/page.html" class="footer__nav-link">Белье</a></li>
+          <li><a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_clothes/page.html" class="footer__nav-link">Одежда</a></li>
+          <li><a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_for_men/page.html" class="footer__nav-link">Мужчинам</a></li>
+          <li><a href="https://21092004Goda.github.io/lab_4/pages/header_container_two/page_for_children/page.html" class="footer__nav-link">Детям</a></li>
+        </ul>
+      </div>
+      <div class="footer__nav-column">
+        <h3 class="footer__nav-title">О компании</h3>
+        <ul class="footer__nav-list">
+          <li><a href="#" class="footer__nav-link">История</a></li>
+          <li><a href="#" class="footer__nav-link">Адреса магазинов</a></li>
+          <li><a href="#" class="footer__nav-link">Статьи</a></li>
+          <li><a href="#" class="footer__nav-link">Политика обработки <br> персональных данных</a></li>
+          <li><a href="https://21092004Goda.github.io/lab_4/pages/header_container_one/page_telephone/page.html" class="footer__nav-link">Контакты</a></li>
+          <li><a href="#" class="footer__nav-link">Карта сайта</a></li>
+        </ul>
+      </div>
+      <div class="footer__nav-column">
+        <h3 class="footer__nav-title">Покупателям</h3>
+        <ul class="footer__nav-list">
+          <li><a href="#" class="footer__nav-link">Частые вопросы</a></li>
+          <li><a href="#" class="footer__nav-link">Доставка и оплата</a></li>
+          <li><a href="#" class="footer__nav-link">Возврат</a></li>
+          <li><a href="#" class="footer__nav-link">Таблица размеров</a></li>
+          <li><a href="#" class="footer__nav-link">Условия обслуживания</a></li>
+          <li><a href="#" class="footer__nav-link">Отслеживание заказа</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+</footer>
+
+</body>
+</html>
