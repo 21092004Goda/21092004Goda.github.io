@@ -1,15 +1,28 @@
 (function () {
     document.addEventListener('DOMContentLoaded', () => {
         const loadTime = performance.now();
-        const footer = document.createElement('footer');
+        let footer = document.querySelector('footer');
+        if (!footer) {
+            footer = document.createElement('footer');
+            document.body.appendChild(footer);
+        }
         footer.textContent = `Page loaded in ${loadTime.toFixed(2)} ms`;
-        document.body.appendChild(footer);
 
+        const currentLocation = document.location.href;
         const currentPage = document.location.pathname.split('/').pop();
-        document.querySelectorAll('.navigation__links ul li a').forEach(link => {
-            if (link.getAttribute('href') === currentPage) {
+
+        document.querySelectorAll('.main-nav__link').forEach(link => {
+            if (currentLocation.includes(link.href) || link.getAttribute('href') === currentPage) {
                 link.classList.add('active');
             }
+
+            link.addEventListener('mouseover', () => {
+                link.classList.add('with-shadow');
+            });
+
+            link.addEventListener('mouseout', () => {
+                link.classList.remove('with-shadow');
+            });
         });
     });
 })();
