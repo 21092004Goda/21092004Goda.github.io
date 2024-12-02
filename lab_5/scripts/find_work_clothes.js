@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Обработчик на кнопку "Save"
     saveButton.addEventListener('click', () => {
         saveTasks();
-        alert('Tasks saved!');
     });
 
     // Функция для загрузки задач из localStorage
@@ -80,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
         tasks.forEach((task) => {
             addTask(task.text, task.completed); // Добавляем задачи с состоянием (выполнена или нет)
         });
-        alert('Tasks loaded!');
     }
 
     // Обработчик на кнопку "Load"
