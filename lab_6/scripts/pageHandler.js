@@ -22,15 +22,24 @@ document.addEventListener("DOMContentLoaded", () => {
         for_men: "Мужчинам",
     };
 
-    // Получаем параметры из URL
+    // Получаем параметр из URL
     const params = new URLSearchParams(window.location.search);
-    const page = params.get("page"); // ожидается параметр вида "?page=new_products"
+    const page = params.get("page"); // ожидается параметр "?page=название"
 
-    // Меняем заголовок в зависимости от значения параметра
+    // Меняем заголовок на странице
     const titleElement = document.getElementById("page-title");
     if (page && titles[page]) {
         titleElement.textContent = titles[page];
     } else {
         titleElement.textContent = "Товары"; // значение по умолчанию
     }
+
+    // Меняем ссылки на актуальный URL
+    const links = document.querySelectorAll("a.main-nav__link, a.footer__nav-link");
+    links.forEach(link => {
+        const targetPage = link.href.split("/").pop().replace(".html", "");
+        if (titles[targetPage]) {
+            link.href = `/lab_6/pages/header_container_two/page.html?page=${targetPage}`;
+        }
+    });
 });

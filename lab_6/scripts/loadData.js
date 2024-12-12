@@ -49,11 +49,11 @@ function renderProducts(comments) {
 
     // Массив возможных картинок
     const images = [
-        "../../../picture/xb3up1fedir8yzxxj5r6mvv5d3hf29r3o.webp.pagespeed.ic.ZFpn4GY4R9.webp",
-        "../../../picture/xgiqs4sqeyvawywlfytffvcsog9oj5p1z.webp.pagespeed.ic.gRZEIRkJ7z.webp",
-        "../../../picture/xbpekvnsidu3ylrc0mfig28vijhnk18fw.webp.pagespeed.ic.vr3KDpAjxu.webp",
-        "../../../picture/x2zvog2mmljc4r3j315c2v0o2mg85kzjf.webp.pagespeed.ic.D7m2mWeoY7.webp",
-        "../../../picture/xb3up1fedir8yzxxj5r6mvv5d3hf29r3o.webp.pagespeed.ic.ZFpn4GY4R9.webp"
+        "../../picture/xb3up1fedir8yzxxj5r6mvv5d3hf29r3o.webp.pagespeed.ic.ZFpn4GY4R9.webp",
+        "../../picture/xgiqs4sqeyvawywlfytffvcsog9oj5p1z.webp.pagespeed.ic.gRZEIRkJ7z.webp",
+        "../../picture/xbpekvnsidu3ylrc0mfig28vijhnk18fw.webp.pagespeed.ic.vr3KDpAjxu.webp",
+        "../../picture/x2zvog2mmljc4r3j315c2v0o2mg85kzjf.webp.pagespeed.ic.D7m2mWeoY7.webp",
+        "../../picture/xb3up1fedir8yzxxj5r6mvv5d3hf29r3o.webp.pagespeed.ic.ZFpn4GY4R9.webp"
     ];
 
     comments.forEach(comment => {
