@@ -37,10 +37,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // Меняем ссылки на актуальный URL
     const links = document.querySelectorAll("a.main-nav__link, a.footer__nav-link");
     links.forEach(link => {
+        // Обрабатываем ссылку заранее
         const pathParts = link.href.split("/");
         const targetPage = pathParts[pathParts.length - 2]?.replace("page_", ""); // Извлекаем ключ из пути
+
+        // Если страница в titles существует, изменяем ссылку
         if (titles[targetPage]) {
-            link.href = `/lab_6/pages/header_container_two/page.html?page=${targetPage}`;
+            // Создаем правильную ссылку
+            const baseURL = 'https://21092004goda.github.io/lab_6/pages/header_container_two/page.html';
+            link.href = `${baseURL}?page=${targetPage}`;
         }
     });
 });
