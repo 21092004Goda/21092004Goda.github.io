@@ -37,7 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Меняем ссылки на актуальный URL
     const links = document.querySelectorAll("a.main-nav__link, a.footer__nav-link");
     links.forEach(link => {
-        const targetPage = link.href.split("/").pop().replace(".html", "");
+        const pathParts = link.href.split("/");
+        const targetPage = pathParts[pathParts.length - 2]?.replace("page_", ""); // Извлекаем ключ из пути
         if (titles[targetPage]) {
             link.href = `/lab_6/pages/header_container_two/page.html?page=${targetPage}`;
         }
