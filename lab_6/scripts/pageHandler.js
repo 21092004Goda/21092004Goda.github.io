@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+    console.log("DOM content loaded");  // Проверка, загружается ли скрипт
+
     const titles = {
         all_products: "Все товары",
         new_products: "Новинки",
