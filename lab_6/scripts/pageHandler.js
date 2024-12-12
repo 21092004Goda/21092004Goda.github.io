@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const page = params.get("page"); // ожидается параметр "?page=название"
 
     // Меняем заголовок на странице
-    const titleElement = document.getElementById("page-title");
+    const titleElement = document.querySelector(".main__title");  // Выбираем элемент по классу
     if (page && titles[page]) {
         titleElement.textContent = titles[page];
     } else {
