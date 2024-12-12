@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("DOM content loaded");  // Проверка, загружается ли скрипт
+    console.log("DOM content loaded");
 
     const titles = {
-        all_products: "Все товары",
+        all_products: "Товары",
         new_products: "Новинки",
         bestsellers: "Бестселлеры",
         swimwear: "Купальники",
@@ -24,15 +24,14 @@ document.addEventListener("DOMContentLoaded", () => {
         for_men: "Мужчинам",
     };
 
-    // Получаем параметр из URL
     const params = new URLSearchParams(window.location.search);
     const page = params.get("page"); // ожидается параметр "?page=название"
 
     // Меняем заголовок на странице
-    const titleElement = document.getElementById("trash");  // Выбираем элемент по классу
+    const titleElement = document.getElementById("trash");
     if (page && titles[page]) {
         titleElement.textContent = titles[page];
     } else {
-        titleElement.textContent = "Товары"; // значение по умолчанию
+        titleElement.textContent = "Товары";
     }
 });

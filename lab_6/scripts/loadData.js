@@ -1,51 +1,50 @@
 document.addEventListener('DOMContentLoaded', () => {
-    loadData(); // Инициализация загрузки данных после загрузки страницы
+    loadData();
 });
 
 function loadData() {
     const preloader = document.getElementById('preloader');
-    const container = document.querySelector('.products-grid'); // Исправлено с getElementById на querySelector
+    const container = document.querySelector('.products-grid');
+    const errorMessage = document.getElementById('error-message');
 
     // Показываем анимацию загрузки
-    preloader.style.opacity = 1; // Показываем preloader
-    container.style.opacity = 0; // Скрываем контейнер товаров
-    container.style.transition = 'opacity 0.3s'; // Плавный переход для container
+    preloader.style.opacity = 1;
+    container.style.opacity = 0;
+    container.style.transition = 'opacity 0.3s';
 
 
-    // Псевдослучайная фильтрация: выбираем комментарии с id больше 100 или меньше 200
     const randomId = Math.random() < 0.5 ? 50 : 200;
     const url = `https://jsonplaceholder.typicode.com/comments?_start=${randomId}&_limit=10`;
 
-    // Запрос данных
     fetch(url)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Ошибка сети');
             }
-            return response.json(); // Десериализация JSON
+            return response.json();
         })
         .then(data => {
-            // Скрываем анимацию и показываем контейнер с данными
-            preloader.style.opacity = 0; // Скрываем preloader
-            container.style.opacity = 1; // Показываем контейнер товаров
+            console.log('Данные получены:', data);
 
+            preloader.style.opacity = 0;
+            container.style.opacity = 1;
 
-            // Рендерим полученные данные
             renderProducts(data);
+            errorMessage.style.display = 'none';
         })
         .catch(error => {
-            // Обработка ошибки (например, нет сети)
-            preloader.style.display = 'none';
-            const errorMessage = document.createElement('p');
-            errorMessage.textContent = '⚠ Что-то пошло не так';
-            container.appendChild(errorMessage);
+            console.error('Ошибка при загрузке данных:', error);
+            preloader.style.opacity = 0;
+            container.style.opacity = 1;
+            errorMessage.style.display = 'block';
         });
 }
 
-// Функция для рендеринга полученных товаров
 function renderProducts(comments) {
-    const container = document.querySelector('.products-grid'); // Исправлено с getElementById на querySelector
-    container.innerHTML = '';  // Очищаем контейнер перед рендером
+    const container = document.querySelector('.products-grid');
+    container.innerHTML = '';
+
+    console.log('Данные для рендеринга:', comments);
 
     // Массив возможных картинок
     const images = [

@@ -90,12 +90,15 @@
     <section>
         <h2 id="trash" class="main__title"></h2>
 
-        <!-- Контейнер для анимации загрузки -->
+        <div class="error-message" id="error-message">
+            <span class="error-message__icon">⚠️</span>
+            <span class="error-message__text">Что-то пошло не так. Попробуйте снова.</span>
+        </div>
+
         <div id="preloader" class="preloader">
             <div class="preloader__spinner"></div>
         </div>
 
-        <!-- Контейнер для сетки товаров -->
         <div class="products-grid"></div>
 
         <script src="/lab_6/scripts/loadData.js"></script>
