@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const page = params.get("page"); // ожидается параметр "?page=название"
 
     // Меняем заголовок на странице
-    const titleElement = document.querySelector(".main__title");  // Выбираем элемент по классу
+    const titleElement = document.getElementById("trash");  // Выбираем элемент по классу
     if (page && titles[page]) {
         titleElement.textContent = titles[page];
     } else {
