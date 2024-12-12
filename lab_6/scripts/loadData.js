@@ -66,7 +66,7 @@ function renderProducts(comments) {
         productElement.innerHTML = `
             <img src="${randomImage}" alt="${comment.name}" class="product__image">
             <div class="product__info">
-                <a href="page3.html" class="product__name">${comment.email}</a>
+                <a href="page3.html" class="product__name">${comment.email.split('@')[0]}</a>
                 <p class="product__price">${comment.id}₽</p>
             </div>
         `;
