@@ -1,20 +1,3 @@
-toastr.options = {
-    "closeButton": true, // Кнопка для закрытия уведомления
-    "debug": false,
-    "newestOnTop": true,
-    "progressBar": true,
-    "positionClass": "toast-bottom-right", // Позиция уведомления
-    "preventDuplicates": true,
-    "showDuration": "300", // Время появления
-    "hideDuration": "1000", // Время исчезновения
-    "timeOut": "5000", // Время отображения
-    "extendedTimeOut": "1000", // Дополнительное время после наведения
-    "showEasing": "swing", // Эффект показа
-    "hideEasing": "linear", // Эффект скрытия
-    "showMethod": "fadeIn", // Эффект появления
-    "hideMethod": "fadeOut" // Эффект исчезновения
-};
-
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('find-clothes-form');
     const taskInput = document.getElementById('task');
@@ -40,12 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
         deleteButton.textContent = 'Delete';
         deleteButton.classList.add('find-clothes__delete');
         deleteButton.addEventListener('click', () => {
-            // Удаляем задачу из списка
-            listItem.remove();
+            listItem.remove(); // Удаляем задачу из списка
             saveTasks(); // Пересохраняем задачи после удаления
-
-            // Показываем уведомление о том, что задача удалена
-            toastr.success('Задача удалена!'); // Уведомление Toastr
         });
 
         // Обработчик изменения состояния чекбокса
@@ -64,9 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
             listItem.style.opacity = 1;
             listItem.style.transform = 'translateY(0)';
         }, 10); // Маленькая задержка, чтобы анимация начала работать
-
-        // Показываем уведомление о добавленной задаче
-        toastr.info('Задача добавлена!'); // Уведомление Toastr при добавлении
     }
 
     // Слушатель на отправку формы
